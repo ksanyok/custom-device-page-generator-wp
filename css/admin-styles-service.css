@@ -1,0 +1,207 @@
+/* Делаем подстроки более узкими */
+.sub-row td {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+/* Выделяем подстроки другим фоном */
+.sub-row {
+    background-color: #f5f5f5;
+}
+
+/* Растягиваем подстроки на всю ширину */
+.sub-row td:first-child {
+    padding-left: 50px;  /* отступ слева, чтобы подстроки выглядели вложенными */
+}
+
+.sub-row td:nth-child(3) {
+    width: 100%;  /* растягиваем третью ячейку на всю доступную ширину */
+}
+
+    .expand-rows {
+        cursor: pointer;
+        color: blue;
+        margin-left: 5px;
+	font-size: 22px;
+    }
+
+    .sub-row > td {
+        padding-left: 20px;
+    }
+
+.device-model-box {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px; /* Добавляем отступ от рамки */
+    box-sizing: border-box; /* Учитываем padding в общей ширине блока */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fields-row {
+    display: flex;
+    justify-content: space-between;
+    width: 80%; /* Уменьшаем ширину до 80% */
+    margin-bottom: 10px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Выравниваем содержимое колонок по центру */
+    width: calc(100% / 3 - 10px);
+}
+
+.field label {
+    margin-bottom: 5px;
+    font-size: 18px; /* Увеличиваем размер шрифта */
+}
+
+.field input, .field select {
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+    box-sizing: border-box; /* Учитываем padding в общей ширине input/select */
+}
+
+.preview-row {
+    font-size: 30px; /* Увеличиваем размер шрифта */
+    text-align: center;
+    width: 100%;
+}
+
+.preview-row strong {
+    color: #007BFF;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+p.preview-label {
+    font-size: 20px;
+}
+
+
+
+/*
+.device-model-box {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: flex; /* Используем flexbox для расположения элементов в ряд */
+    align-items: center; /* Выравниваем элементы по вертикали */
+    width: fit-content; /* чтобы подложка не растягивалась на всю ширину */
+}
+
+.device-model-box label {
+    font-size: 20px; /* Увеличиваем размер шрифта */
+    font-weight: bold; /* Делаем текст жирным */
+    margin-right: 10px; /* Добавляем небольшой отступ справа */
+}
+
+.device-model-box input {
+    padding: 5px;
+    font-size: 16px;
+    flex-grow: 1; /* Позволяем полю ввода растягиваться на всю оставшуюся ширину */
+}
+*/
+
+
+
+/* Стили для таблицы логов */
+.cdpg-tab-content-logs table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cdpg-tab-content-logs th, .cdpg-tab-content-logs td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+.cdpg-tab-content-logs th {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Стили для кнопки Генерировать */
+input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;   /* добавим отступ сверху */
+    margin-bottom: 20px; /* добавим отступ снизу */
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+input[type="submit"]:active {
+    background-color: #00335b;
+}
+
+
+
+
+
+
+
+/* Стили для верхних вкладок */
+.cdpg-tab {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    font-size: 18px;
+    background-color: #f5f5f5;
+    text-decoration: none;
+    color: #333;
+}
+
+.cdpg-tab-active {
+    border-bottom: none;
+    background-color: #fff;
+}
+
+/* Стили для внутренних вкладок */
+.cdpg-inner-tab {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #f5f5f5;
+    text-decoration: none;
+    color: #333;
+}
+
+.cdpg-inner-tab-active {
+    border-bottom: none;
+    background-color: #fff;
+}
+
+/* Стили для содержимого вкладок */
+.cdpg-tab-content, .cdpg-inner-tab-content {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.cdpg-tab-content-item, .cdpg-inner-tab-content-item {
+    display: none;
+}
+
+.cdpg-tab-content-active, .cdpg-inner-tab-content-active {
+    display: block;
+}
